@@ -1,0 +1,11 @@
+void reverseInGroups(vector<long long>& arr, int n, int k){
+        int p=n/k;
+        int q=0;
+        int p1=p;
+        while(p--){
+       reverse(arr.begin()+q,arr.begin()+k+q);
+       q+=k;
+        }
+        int z=n-p1*k;
+        reverse(arr.end()-z,arr.end());
+    }
