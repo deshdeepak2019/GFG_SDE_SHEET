@@ -1,0 +1,10 @@
+void zigZag(int a[], int n) {
+	   for(int i=1;i<n;i+=2){
+	       if(a[i-1]>a[i]){
+	           swap(a[i],a[i-1]);
+	       }
+	       if(i+1<n and (a[i+1]>a[i])){
+	           swap(a[i],a[i+1]);
+	       }
+	   }
+	}
