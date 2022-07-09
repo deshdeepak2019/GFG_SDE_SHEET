@@ -1,0 +1,17 @@
+int equilibriumPoint(long long int a[], long long int n)
+{ long long int tsum=0,sum=0;
+    
+   for(int i=0;i<n;i++){
+       tsum+=a[i];
+   }
+   for(int i=0;i<n;i++){
+       if(sum==(tsum-sum-a[i])){
+           return i+1;
+       }
+           sum+=a[i];
+   }
+   return -1;
+}
+
+
+OR FROM PREFIX AND SUFFIX ARRAY
