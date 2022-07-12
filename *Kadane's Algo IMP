@@ -1,0 +1,24 @@
+1. BRUTEFORCE -- O(N*N) AND O(1)
+
+2. BETTER -- O(N) AND O(1)
+
+long long maxSubarraySum(int arr[], int n){
+    int mxsum=0,csum=0,mx=INT_MIN,c=0;
+    for(int i=0;i<n;i++){
+        if(arr[i]<0){
+            c++;
+        }
+        mx=max(mx,arr[i]);
+    }
+    if(c==n){
+        return mx;
+    }
+    for(int i=0;i<n;i++){
+        csum+=arr[i];
+        mxsum=max(csum,mxsum);
+        if(csum<0){
+            csum=0;
+        }
+    }
+        return mxsum;
+    }
