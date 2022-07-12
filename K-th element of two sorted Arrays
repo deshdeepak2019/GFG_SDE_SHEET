@@ -13,7 +13,7 @@ int kthElement(int arr1[], int arr2[], int n, int m, int k)
      return v[k-1];
     }
     
-    BETTER APRROACH-- O(N) and O(N)
+    BETTER APRROACH-- O(N) and O(N+m)
     
     
    int kthElement(int arr1[], int arr2[], int n, int m, int k)
