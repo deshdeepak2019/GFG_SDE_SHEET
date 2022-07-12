@@ -1,6 +1,6 @@
 BRUTEFORCE -- O(NLOGN) AND O(1)  BY SORTING
 
-OPTIMAL -- O(N) AND O(N)
+OPTIMAL -- O(N) AND O(N+N)
 
 
  bool check(vector<ll> a, vector<ll> b, int n) {
@@ -16,4 +16,21 @@ OPTIMAL -- O(N) AND O(N)
        }else{
            return 0;
        }
+    }
+
+
+
+USING ONLY ONE MAP
+
+ unordered_map<int,int>mp;
+       for(int i=0;i<n;i++){
+           mp[a[i]]++;
+       }
+       for(int i=0;i<n;i++){
+           if(mp.find(b[i])==mp.end())
+           return false;
+           if(mp[b[i]]==0)
+           return false;
+           mp[b[i]]--;
+       }return true;
     }
