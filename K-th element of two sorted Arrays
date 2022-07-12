@@ -39,3 +39,41 @@ int kthElement(int arr1[], int arr2[], int n, int m, int k)
      }
      return v[k-1];
     }
+
+
+BEST APPROACH  -- O(N) AND O(1)
+
+
+ int kthElement(int arr1[], int arr2[], int n, int m, int k)
+    {
+    int ans=0,j=0,i=0;
+    while(i<n and j<m){
+        if(arr1[i]<arr2[j]){
+            ans++; 
+            if(ans==k){
+                return arr1[i];
+            }
+            i++;
+        }else{
+            ans++;
+            if(ans==k){
+                return arr2[j];
+            }
+             j++;
+        }
+    }
+    while(i<n){
+        ans++;
+        if(ans==k){
+            return arr1[i];
+        }
+        i++;
+    }
+    while(j<m){
+        ans++;
+        if(ans==k){
+            return arr2[j];
+        }
+        j++;
+    }
+    }
