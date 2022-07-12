@@ -1,0 +1,19 @@
+BRUTEFORCE -- O(NLOGN) AND O(1)  BY SORTING
+
+OPTIMAL -- O(N) AND O(N)
+
+
+ bool check(vector<ll> a, vector<ll> b, int n) {
+       unordered_map<int,int>mp1,mp2;
+       for(int i=0;i<n;i++){
+           mp1[a[i]]++;
+       }
+       for(int i=0;i<n;i++){
+           mp2[b[i]]++;
+       }
+       if(mp1==mp2){
+           return 1;
+       }else{
+           return 0;
+       }
+    }
