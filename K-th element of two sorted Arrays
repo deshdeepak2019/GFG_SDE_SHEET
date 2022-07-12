@@ -41,7 +41,8 @@ int kthElement(int arr1[], int arr2[], int n, int m, int k)
     }
 
 
-BEST APPROACH  -- O(N) AND O(1)
+
+BEST APPROACH  -- O(K) AND O(1)
 
 
  int kthElement(int arr1[], int arr2[], int n, int m, int k)
